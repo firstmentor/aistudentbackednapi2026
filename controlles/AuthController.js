@@ -42,8 +42,9 @@ class AuthController {
 
             res.cookie("token", token, {
                 httpOnly: true,
-                secure: false,       // production me true
-                sameSite: "lax"
+                secure: true,        // HTTPS required
+                sameSite: "none",    // CROSS DOMAIN
+                maxAge: 24 * 60 * 60 * 1000
             });
 
 
