@@ -6,12 +6,13 @@ const connectDB = require('./db/connectDB')
 const cookieParser = require('cookie-parser')
 const cors = require("cors");
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // React app
-    credentials: true
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://aistudentbackednapi2026.onrender.com"
+  ],
+  credentials: true
+}));
 
 
 //connect db
