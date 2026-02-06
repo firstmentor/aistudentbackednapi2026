@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://aistudentbackednapi2026.onrender.com"
+    "https://pnaistudent.netlify.app"
   ],
   credentials: true
 }));
